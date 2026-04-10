@@ -1,0 +1,8 @@
+public class Main {
+    public static void main(String[] args) {
+        int number = 5;   // 'int' is keyword
+        final int MAX = 100; // 'final' keyword
+
+        System.out.println(number);
+    }
+}
