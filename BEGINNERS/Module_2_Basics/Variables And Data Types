@@ -11,3 +11,4 @@ public class VariablesAndDataTypes {
         System.out.println(isJavaFun);
     }
 }
+
