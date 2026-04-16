@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 10;
+
+        // Primitive → Object
+        Integer obj = num;
+
+        // Object → Primitive
+        int value = obj;
+
+        System.out.println(obj);
+        System.out.println(value);
+
+        // Parsing
+        String str = "123";
+        int parsed = Integer.parseInt(str);
+
+        System.out.println(parsed);
+    }
+}
