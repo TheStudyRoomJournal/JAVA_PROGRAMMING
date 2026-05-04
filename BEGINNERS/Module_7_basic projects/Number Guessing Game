@@ -1,0 +1,56 @@
+import java.util.Scanner; import java.util.Random;
+// Class (OOP) class GuessingGame {
+// Encapsulation (private variables)
+private int secretNumber;
+private int attempts;
+
+// Static variable
+static String gameName = "Number Guessing Game";
+
+// Constructor
+GuessingGame() {
+    Random rand = new Random();
+    secretNumber = rand.nextInt(100) + 1; // 1–100
+    attempts = 0;
+}
+
+// Method to check guess
+public String checkGuess(int guess) {
+    attempts++;
+
+    if (guess > secretNumber) {
+        return "Too high!";
+    } else if (guess < secretNumber) {
+        return "Too low!";
+    } else {
+        return "Correct! Attempts: " + attempts;
+    }
+}
+
+// Getter (Encapsulation)
+public int getAttempts() {
+    return attempts;
+}
+}
+public class Main { public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("=== " + GuessingGame.gameName + " ===");
+
+    GuessingGame game = new GuessingGame();
+
+    int guess;
+
+    // do-while loop
+    do {
+        System.out.print("Enter your guess (1-100): ");
+        guess = sc.nextInt();
+
+        String result = game.checkGuess(guess);
+        System.out.println(result);
+
+    } while (!result.startsWith("Correct")); // loop until correct
+
+    sc.close();
+}
+}
