@@ -18,6 +18,7 @@ public double add() {
     return num1 + num2;
 }
 
+
 public double subtract() {
     return num1 - num2;
 }
