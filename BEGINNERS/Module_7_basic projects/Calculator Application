@@ -1,1 +1,103 @@
+import java.util.Scanner; // User Input (Scanner Class)
+// Class (OOP concept) class Calculator {
+// Static variable
+static String appName = "Simple Calculator";
 
+// Instance variables (Encapsulation)
+private double num1;
+private double num2;
+
+// Constructor
+Calculator(double num1, double num2) {
+    this.num1 = num1; // this keyword
+    this.num2 = num2;
+}
+
+// Methods (Functions)
+public double add() {
+    return num1 + num2;
+}
+
+public double subtract() {
+    return num1 - num2;
+}
+
+public double multiply() {
+    return num1 * num2;
+}
+
+public double divide() {
+    if (num2 == 0) {
+        System.out.println("Cannot divide by zero!");
+        return 0;
+    }
+    return num1 / num2;
+}
+
+// Method Overloading
+public int add(int a, int b) {
+    return a + b;
+}
+}
+public class Main { public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    // Variables & Data Types
+    double num1, num2;
+    int choice;
+
+    System.out.println("=== " + Calculator.appName + " ===");
+
+    // User Input
+    System.out.print("Enter first number: ");
+    num1 = sc.nextDouble();
+
+    System.out.print("Enter second number: ");
+    num2 = sc.nextDouble();
+
+    // Object creation
+    Calculator calc = new Calculator(num1, num2);
+
+    // Control Flow (do-while loop)
+    do {
+        System.out.println("\nChoose operation:");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.println("5. Exit");
+
+        choice = sc.nextInt();
+
+        // switch case
+        switch (choice) {
+            case 1:
+                System.out.println("Result: " + calc.add());
+                break;
+
+            case 2:
+                System.out.println("Result: " + calc.subtract());
+                break;
+
+            case 3:
+                System.out.println("Result: " + calc.multiply());
+                break;
+
+            case 4:
+                System.out.println("Result: " + calc.divide());
+                break;
+
+            case 5:
+                System.out.println("Exiting...");
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+                continue; // continue keyword
+        }
+
+    } while (choice != 5); // loop condition
+
+    sc.close(); // resource cleanup
+}
+}
