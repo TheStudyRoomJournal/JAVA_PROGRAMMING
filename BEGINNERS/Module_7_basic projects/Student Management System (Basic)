@@ -1,0 +1,134 @@
+import java.util.Scanner;
+// Class (OOP) class Student {
+// Encapsulation (private variables)
+private int id;
+private String name;
+private double marks;
+
+// Constructor
+Student(int id, String name, double marks) {
+    this.id = id;       // this keyword
+    this.name = name;
+    this.marks = marks;
+}
+
+// Getter methods
+public int getId() {
+    return id;
+}
+
+public String getName() {
+    return name;
+}
+
+public double getMarks() {
+    return marks;
+}
+
+// Display method
+public void display() {
+    System.out.println("ID: " + id + ", Name: " + name + ", Marks: " + marks);
+}
+}
+public class Main {
+// Static array to store students
+static Student[] students = new Student[100];
+static int count = 0;
+
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    int choice;
+
+    do {
+        System.out.println("\n=== Student Management System ===");
+        System.out.println("1. Add Student");
+        System.out.println("2. View Students");
+        System.out.println("3. Search Student");
+        System.out.println("4. Exit");
+
+        choice = sc.nextInt();
+
+        switch (choice) {
+
+            case 1:
+                addStudent(sc);
+                break;
+
+            case 2:
+                viewStudents();
+                break;
+
+            case 3:
+                searchStudent(sc);
+                break;
+
+            case 4:
+                System.out.println("Exiting...");
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+    } while (choice != 4);
+
+    sc.close();
+}
+
+// Method to add student
+public static void addStudent(Scanner sc) {
+
+    System.out.print("Enter ID: ");
+    int id = sc.nextInt();
+
+    sc.nextLine(); // clear buffer
+
+    System.out.print("Enter Name: ");
+    String name = sc.nextLine();
+
+    System.out.print("Enter Marks: ");
+    double marks = sc.nextDouble();
+
+    // Object creation
+    students[count] = new Student(id, name, marks);
+    count++;
+
+    System.out.println("Student added successfully!");
+}
+
+// Method to view students
+public static void viewStudents() {
+
+    if (count == 0) {
+        System.out.println("No students found!");
+        return;
+    }
+
+    for (int i = 0; i < count; i++) {
+        students[i].display();
+    }
+}
+
+// Method to search student
+public static void searchStudent(Scanner sc) {
+
+    System.out.print("Enter ID to search: ");
+    int id = sc.nextInt();
+
+    boolean found = false;
+
+    for (int i = 0; i < count; i++) {
+
+        if (students[i].getId() == id) {
+            students[i].display();
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        System.out.println("Student not found!");
+    }
+}
+}
