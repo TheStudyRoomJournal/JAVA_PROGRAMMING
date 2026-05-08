@@ -1,12 +1,32 @@
-// Description:
-// Spring Boot microservice example.
+/*
+Description:
+Simple Spring Boot REST microservice.
 
-// Key Notes:
-// - Lightweight standalone service
+Requirements:
+- Spring Boot Starter Web dependency
+*/
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@RestController
 
 public class SpringBootMicroservice {
 
+    @GetMapping("/hello")
+    public String hello() {
+
+        return "Microservice Running";
+    }
+
     public static void main(String[] args) {
-        System.out.println("Microservice Running");
+
+        SpringApplication.run(
+            SpringBootMicroservice.class,
+            args
+        );
     }
 }
