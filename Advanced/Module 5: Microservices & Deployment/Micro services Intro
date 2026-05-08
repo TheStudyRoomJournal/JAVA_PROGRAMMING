@@ -1,0 +1,12 @@
+// Description:
+// Microservices architecture overview.
+
+// Key Notes:
+// - Services are independently deployable
+
+public class MicroservicesIntro {
+
+    public static void main(String[] args) {
+        System.out.println("Microservices");
+    }
+}
