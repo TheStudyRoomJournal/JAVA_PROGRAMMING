@@ -1,0 +1,13 @@
+// Description:
+// Mini Java 8 data processing app structure.
+
+// Key Notes:
+// - Uses streams, collections, lambdas
+
+public class DataProcessingMiniProject {
+
+    public static void main(String[] args) {
+
+        System.out.println("Data Processing App");
+    }
+}
