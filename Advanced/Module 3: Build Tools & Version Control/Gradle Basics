@@ -1,0 +1,12 @@
+// Description:
+// Gradle basics example.
+
+// Key Notes:
+// - build.gradle manages builds
+
+public class GradleBasics {
+
+    public static void main(String[] args) {
+        System.out.println("Gradle Build Tool");
+    }
+}
