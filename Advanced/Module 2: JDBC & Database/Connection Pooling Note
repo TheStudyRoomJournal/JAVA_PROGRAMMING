@@ -1,0 +1,15 @@
+// Description:
+// Conceptual example of connection pooling.
+
+// Key Notes:
+// - Reuses DB connections
+// - Improves performance
+
+public class ConnectionPoolingNote {
+
+    public static void main(String[] args) {
+        System.out.println(
+            "Use HikariCP or Apache DBCP for pooling"
+        );
+    }
+}
