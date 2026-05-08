@@ -1,0 +1,12 @@
+// Description:
+// Spring Boot microservice example.
+
+// Key Notes:
+// - Lightweight standalone service
+
+public class SpringBootMicroservice {
+
+    public static void main(String[] args) {
+        System.out.println("Microservice Running");
+    }
+}
