@@ -1,0 +1,17 @@
+// Description:
+// Input validation example.
+
+// Key Notes:
+// - Prevents invalid data
+
+public class ValidationDemo {
+
+    public static void main(String[] args) {
+
+        String name = "";
+
+        if(name.isEmpty()) {
+            System.out.println("Invalid Name");
+        }
+    }
+}
