@@ -1,0 +1,15 @@
+// Description:
+// Demonstrates thread states concept.
+
+// Key Notes:
+// - New → Runnable → Running → Dead
+
+public class ThreadLifecycle {
+
+    public static void main(String[] args) {
+
+        Thread t = new Thread();
+
+        System.out.println(t.getState());
+    }
+}
