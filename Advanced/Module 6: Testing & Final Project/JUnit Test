@@ -1,12 +1,29 @@
-// Description:
-// Unit testing example structure.
+/*
+Description:
+Demonstrates JUnit unit testing.
 
-// Key Notes:
-// - Tests individual methods
+Requirements:
+- JUnit dependency
+*/
 
-public class JUnitTestDemo {
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
-        System.out.println("JUnit Testing");
+import static org.junit.jupiter.api.Assertions.*;
+
+class Calculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+public class JUnitTestingDemo {
+
+    Calculator c = new Calculator();
+
+    @Test
+    void testAddition() {
+
+        assertEquals(10, c.add(5, 5));
     }
 }
