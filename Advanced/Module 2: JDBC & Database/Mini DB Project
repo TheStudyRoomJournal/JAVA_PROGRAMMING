@@ -1,0 +1,13 @@
+// Description:
+// Mini console database application structure.
+
+// Key Notes:
+// - Combines CRUD operations
+
+public class MiniDBProject {
+
+    public static void main(String[] args) {
+
+        System.out.println("Mini DB App Started");
+    }
+}
