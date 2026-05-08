@@ -1,0 +1,17 @@
+// Description:
+// Demonstrates File class usage.
+
+// Key Notes:
+// - Represents file/directory path
+
+import java.io.File;
+
+public class FileClassDemo {
+
+    public static void main(String[] args) {
+
+        File f = new File("test.txt");
+
+        System.out.println(f.exists());
+    }
+}
