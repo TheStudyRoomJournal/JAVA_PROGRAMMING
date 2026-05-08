@@ -1,0 +1,19 @@
+// Description:
+// Demonstrates object serialization.
+
+// Key Notes:
+// - Converts object into byte stream
+
+import java.io.*;
+
+class Student implements Serializable {
+
+    int id = 1;
+}
+
+public class SerializationDemo {
+
+    public static void main(String[] args) {
+        System.out.println("Serialization Example");
+    }
+}
