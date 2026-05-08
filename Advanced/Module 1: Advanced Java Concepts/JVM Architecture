@@ -1,0 +1,16 @@
+// Description:
+// Demonstrates JVM execution flow basics.
+
+// Key Notes:
+// - JVM runs compiled bytecode
+// - Stack stores method calls
+// - Heap stores objects
+
+public class JVMArchitectureDemo {
+
+    public static void main(String[] args) {
+        String message = new String("JVM Example");
+
+        System.out.println(message);
+    }
+}
