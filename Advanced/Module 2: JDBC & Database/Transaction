@@ -1,0 +1,33 @@
+// Description:
+// Demonstrates JDBC transaction management.
+
+// Key Notes:
+// - commit() saves changes
+// - rollback() reverses changes
+
+import java.sql.*;
+
+public class TransactionDemo {
+
+    public static void main(String[] args) throws Exception {
+
+        Connection con =
+            DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test",
+                "root",
+                "password"
+            );
+
+        con.setAutoCommit(false);
+
+        Statement st = con.createStatement();
+
+        st.executeUpdate(
+            "INSERT INTO student VALUES(3,'Tom')"
+        );
+
+        con.commit();
+
+        System.out.println("Transaction Completed");
+    }
+}
