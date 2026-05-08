@@ -1,0 +1,22 @@
+// Description:
+// Demonstrates Runnable interface.
+
+// Key Notes:
+// - Preferred over extending Thread
+
+class Task implements Runnable {
+
+    public void run() {
+        System.out.println("Runnable Task");
+    }
+}
+
+public class RunnableInterfaceDemo {
+
+    public static void main(String[] args) {
+
+        Thread t = new Thread(new Task());
+
+        t.start();
+    }
+}
