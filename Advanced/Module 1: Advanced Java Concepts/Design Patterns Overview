@@ -1,0 +1,25 @@
+// Description:
+// Simple design pattern structure example.
+
+// Key Notes:
+// - Patterns provide reusable solutions
+// - Improves maintainability
+
+interface Shape {
+    void draw();
+}
+
+class Circle implements Shape {
+
+    public void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class DesignPatternsOverview {
+
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+    }
+}
