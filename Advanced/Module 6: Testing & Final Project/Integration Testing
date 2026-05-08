@@ -1,12 +1,36 @@
-// Description:
-// Integration testing overview.
+/*
+Description:
+Demonstrates simple integration testing.
 
-// Key Notes:
-// - Tests interaction between components
+Key Concepts:
+- Tests interaction between classes
+*/
 
-public class IntegrationTesting {
+class DatabaseService {
+
+    String connect() {
+        return "Database Connected";
+    }
+}
+
+class UserService {
+
+    DatabaseService db = new DatabaseService();
+
+    void getData() {
+
+        System.out.println(db.connect());
+
+        System.out.println("Fetching User Data");
+    }
+}
+
+public class IntegrationTestingDemo {
 
     public static void main(String[] args) {
-        System.out.println("Integration Testing");
+
+        UserService us = new UserService();
+
+        us.getData();
     }
 }
