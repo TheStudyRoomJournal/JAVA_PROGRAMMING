@@ -1,0 +1,21 @@
+// Description:
+// Demonstrates functional interface.
+
+// Key Notes:
+// - Contains one abstract method
+
+@FunctionalInterface
+interface Test {
+
+    void show();
+}
+
+public class FunctionalInterfaces {
+
+    public static void main(String[] args) {
+
+        Test t = () -> System.out.println("Functional Interface");
+
+        t.show();
+    }
+}
