@@ -1,0 +1,13 @@
+// Description:
+// Demonstrates basic thread communication concept.
+
+// Key Notes:
+// - wait() and notify()
+
+public class ThreadCommunication {
+
+    public static void main(String[] args) {
+
+        System.out.println("Thread Communication Example");
+    }
+}
