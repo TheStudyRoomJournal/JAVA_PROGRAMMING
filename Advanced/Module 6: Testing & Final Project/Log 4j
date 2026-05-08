@@ -1,12 +1,25 @@
-// Description:
-// Logging concept example.
+/*
+Description:
+Demonstrates Log4j logging.
 
-// Key Notes:
-// - Logs help debugging and monitoring
+Requirements:
+- Log4j dependency
+*/
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Log4jDemo {
 
+    private static final Logger logger =
+        LogManager.getLogger(Log4jDemo.class);
+
     public static void main(String[] args) {
-        System.out.println("Application Log");
+
+        logger.info("Application Started");
+
+        logger.warn("Warning Message");
+
+        logger.error("Error Message");
     }
 }
