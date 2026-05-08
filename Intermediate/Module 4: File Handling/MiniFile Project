@@ -1,0 +1,13 @@
+// Description:
+// Mini file handling project structure.
+
+// Key Notes:
+// - Combines read/write operations
+
+public class MiniFileProject {
+
+    public static void main(String[] args) {
+
+        System.out.println("Mini File Project");
+    }
+}
