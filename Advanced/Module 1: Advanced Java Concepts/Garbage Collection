@@ -1,0 +1,23 @@
+// Description:
+// Demonstrates object eligibility for garbage collection.
+
+// Key Notes:
+// - Unused objects are removed automatically
+// - System.gc() requests garbage collection
+
+class Demo {
+    protected void finalize() {
+        System.out.println("Object destroyed");
+    }
+}
+
+public class GarbageCollectionDemo {
+
+    public static void main(String[] args) {
+        Demo d = new Demo();
+
+        d = null;
+
+        System.gc();
+    }
+}
