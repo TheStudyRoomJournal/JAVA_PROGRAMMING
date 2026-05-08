@@ -1,0 +1,15 @@
+// Description:
+// Basic JDBC driver loading example.
+
+// Key Notes:
+// - JDBC connects Java with databases
+
+public class JDBCIntro {
+
+    public static void main(String[] args) throws Exception {
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        System.out.println("Driver Loaded");
+    }
+}
