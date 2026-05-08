@@ -1,0 +1,12 @@
+// Description:
+// API Gateway overview.
+
+// Key Notes:
+// - Single entry point for services
+
+public class APIGateway {
+
+    public static void main(String[] args) {
+        System.out.println("API Gateway");
+    }
+}
