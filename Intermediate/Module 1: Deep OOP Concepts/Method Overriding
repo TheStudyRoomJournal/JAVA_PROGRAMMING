@@ -1,0 +1,30 @@
+// Description:
+// Demonstrates method overriding.
+
+// Key Notes:
+// - Child class redefines parent method
+
+class Parent {
+
+    void display() {
+        System.out.println("Parent Method");
+    }
+}
+
+class Child extends Parent {
+
+    @Override
+    void display() {
+        System.out.println("Child Method");
+    }
+}
+
+public class MethodOverriding {
+
+    public static void main(String[] args) {
+
+        Child c = new Child();
+
+        c.display();
+    }
+}
