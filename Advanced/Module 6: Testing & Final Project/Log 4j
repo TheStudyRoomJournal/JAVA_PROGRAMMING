@@ -1,0 +1,12 @@
+// Description:
+// Logging concept example.
+
+// Key Notes:
+// - Logs help debugging and monitoring
+
+public class Log4jDemo {
+
+    public static void main(String[] args) {
+        System.out.println("Application Log");
+    }
+}
