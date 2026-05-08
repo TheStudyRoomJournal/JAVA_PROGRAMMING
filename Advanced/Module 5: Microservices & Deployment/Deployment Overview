@@ -1,12 +1,35 @@
-// Description:
-// Deployment workflow overview.
+/*
+Description:
+Simulates deployment process steps.
 
-// Key Notes:
-// - Application moved to production server
+Key Concepts:
+- Build
+- Test
+- Deploy
+*/
 
 public class DeploymentOverview {
 
+    static void build() {
+        System.out.println("Building Application...");
+    }
+
+    static void test() {
+        System.out.println("Running Tests...");
+    }
+
+    static void deploy() {
+        System.out.println("Deploying to Server...");
+    }
+
     public static void main(String[] args) {
-        System.out.println("Deployment Process");
+
+        build();
+
+        test();
+
+        deploy();
+
+        System.out.println("Deployment Successful");
     }
 }
