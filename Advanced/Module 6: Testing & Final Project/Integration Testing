@@ -1,0 +1,12 @@
+// Description:
+// Integration testing overview.
+
+// Key Notes:
+// - Tests interaction between components
+
+public class IntegrationTesting {
+
+    public static void main(String[] args) {
+        System.out.println("Integration Testing");
+    }
+}
