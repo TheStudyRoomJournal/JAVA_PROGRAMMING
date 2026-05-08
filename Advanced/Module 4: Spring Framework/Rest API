@@ -1,0 +1,12 @@
+// Description:
+// REST API structure overview.
+
+// Key Notes:
+// - Handles HTTP requests
+
+public class RestAPIDemo {
+
+    public static void main(String[] args) {
+        System.out.println("REST API Example");
+    }
+}
