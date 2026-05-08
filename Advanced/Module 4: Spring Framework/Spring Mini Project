@@ -1,0 +1,12 @@
+// Description:
+// Mini REST API project structure.
+
+// Key Notes:
+// - Combines controller, service, repository
+
+public class SpringMiniProject {
+
+    public static void main(String[] args) {
+        System.out.println("Spring Mini Project");
+    }
+}
