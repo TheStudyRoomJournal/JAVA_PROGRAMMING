@@ -1,0 +1,23 @@
+// Description:
+// Demonstrates database connection.
+
+// Key Notes:
+// - Requires JDBC driver and database setup
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnection {
+
+    public static void main(String[] args) throws Exception {
+
+        Connection con =
+            DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test",
+                "root",
+                "password"
+            );
+
+        System.out.println("Connected");
+    }
+}
