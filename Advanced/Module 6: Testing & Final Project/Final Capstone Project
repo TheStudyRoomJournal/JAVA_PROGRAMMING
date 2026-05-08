@@ -1,0 +1,12 @@
+// Description:
+// Final project structure placeholder.
+
+// Key Notes:
+// - Combines backend, DB, APIs, testing
+
+public class FinalCapstoneProject {
+
+    public static void main(String[] args) {
+        System.out.println("Capstone Project");
+    }
+}
