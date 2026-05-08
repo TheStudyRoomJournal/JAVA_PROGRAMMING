@@ -1,0 +1,27 @@
+// Description:
+// Demonstrates abstraction using abstract class.
+
+// Key Notes:
+// - Abstract methods have no body
+
+abstract class Vehicle {
+
+    abstract void start();
+}
+
+class Car extends Vehicle {
+
+    void start() {
+        System.out.println("Car Starts");
+    }
+}
+
+public class AbstractionDemo {
+
+    public static void main(String[] args) {
+
+        Car c = new Car();
+
+        c.start();
+    }
+}
