@@ -1,0 +1,19 @@
+// Description:
+// Demonstrates Map interface.
+
+// Key Notes:
+// - Stores key-value pairs
+
+import java.util.*;
+
+public class MapInterfaceDemo {
+
+    public static void main(String[] args) {
+
+        Map<Integer, String> map = new HashMap<>();
+
+        map.put(1, "John");
+
+        System.out.println(map);
+    }
+}
