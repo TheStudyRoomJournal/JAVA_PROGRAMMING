@@ -1,0 +1,17 @@
+// Description:
+// Demonstrates bean-like object creation.
+
+// Key Notes:
+// - Beans managed by Spring container
+
+class Student {}
+
+public class SpringBeans {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(s);
+    }
+}
