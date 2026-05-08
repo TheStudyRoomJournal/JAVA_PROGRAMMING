@@ -1,12 +1,37 @@
-// Description:
-// Microservices architecture overview.
+/*
+Description:
+Demonstrates basic microservices communication structure.
 
-// Key Notes:
-// - Services are independently deployable
+Key Concepts:
+- Independent services
+- Loose coupling
+- API communication
+*/
 
-public class MicroservicesIntro {
+class UserService {
+
+    String getUser() {
+        return "User Data";
+    }
+}
+
+class OrderService {
+
+    void placeOrder() {
+        System.out.println("Order Placed");
+    }
+}
+
+public class MicroservicesArchitectureDemo {
 
     public static void main(String[] args) {
-        System.out.println("Microservices");
+
+        UserService us = new UserService();
+
+        OrderService os = new OrderService();
+
+        System.out.println(us.getUser());
+
+        os.placeOrder();
     }
 }
