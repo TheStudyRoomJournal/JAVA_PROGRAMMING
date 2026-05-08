@@ -1,0 +1,15 @@
+// Description:
+// Demonstrates runtime exception.
+
+// Key Notes:
+// - Exceptions interrupt normal execution
+
+public class ExceptionBasics {
+
+    public static void main(String[] args) {
+
+        int a = 10 / 0;
+
+        System.out.println(a);
+    }
+}
