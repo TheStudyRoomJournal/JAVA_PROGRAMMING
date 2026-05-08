@@ -1,0 +1,12 @@
+// Description:
+// Dependency management overview.
+
+// Key Notes:
+// - External libraries handled automatically
+
+public class DependencyManagement {
+
+    public static void main(String[] args) {
+        System.out.println("Managing Dependencies");
+    }
+}
