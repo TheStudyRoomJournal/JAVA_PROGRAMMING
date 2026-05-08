@@ -1,12 +1,18 @@
-// Description:
-// Docker basics overview.
+/*
+Description:
+Demonstrates Docker deployment workflow.
 
-// Key Notes:
-// - Containers package applications
+Key Concepts:
+- Containerization
+- Portable deployment
+*/
 
 public class DockerBasics {
 
     public static void main(String[] args) {
-        System.out.println("Docker Container");
+
+        System.out.println("Docker Container Started");
+
+        System.out.println("Application Running Inside Container");
     }
 }
