@@ -1,0 +1,12 @@
+// Description:
+// Spring Data JPA overview.
+
+// Key Notes:
+// - Simplifies database operations
+
+public class SpringDataJPA {
+
+    public static void main(String[] args) {
+        System.out.println("JPA Repository");
+    }
+}
