@@ -1,0 +1,22 @@
+// Description:
+// Demonstrates Java Reflection API.
+
+// Key Notes:
+// - Access class metadata at runtime
+// - Inspect methods and fields dynamically
+
+class Student {
+    void show() {
+        System.out.println("Student class");
+    }
+}
+
+public class ReflectionDemo {
+
+    public static void main(String[] args) throws Exception {
+
+        Class<?> obj = Student.class;
+
+        System.out.println(obj.getName());
+    }
+}
