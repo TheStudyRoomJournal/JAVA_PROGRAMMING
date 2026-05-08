@@ -1,0 +1,28 @@
+// Description:
+// Demonstrates dependency injection concept.
+
+// Key Notes:
+// - Objects provided externally
+
+class Engine {}
+
+class Car {
+
+    Engine e;
+
+    Car(Engine e) {
+        this.e = e;
+    }
+}
+
+public class DependencyInjection {
+
+    public static void main(String[] args) {
+
+        Engine e = new Engine();
+
+        Car c = new Car(e);
+
+        System.out.println("Dependency Injected");
+    }
+}
