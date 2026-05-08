@@ -1,0 +1,25 @@
+// Description:
+// Demonstrates synchronization.
+
+// Key Notes:
+// - Prevents thread interference
+
+class Table {
+
+    synchronized void printTable(int n) {
+
+        for(int i=1; i<=5; i++) {
+            System.out.println(n * i);
+        }
+    }
+}
+
+public class SynchronizationDemo {
+
+    public static void main(String[] args) {
+
+        Table t = new Table();
+
+        t.printTable(5);
+    }
+}
