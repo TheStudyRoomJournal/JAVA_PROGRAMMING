@@ -1,0 +1,24 @@
+// Description:
+// Demonstrates Object class methods.
+
+// Key Notes:
+// - toString(), equals(), hashCode()
+
+class Student {
+
+    int id = 1;
+
+    public String toString() {
+        return "Student ID: " + id;
+    }
+}
+
+public class ObjectClassMethods {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(s.toString());
+    }
+}
