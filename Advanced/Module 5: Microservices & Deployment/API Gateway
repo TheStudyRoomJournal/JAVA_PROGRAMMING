@@ -1,12 +1,54 @@
-// Description:
-// API Gateway overview.
+/*
+Description:
+Simulates API Gateway request routing.
 
-// Key Notes:
-// - Single entry point for services
+Key Concepts:
+- Centralized request handling
+- Routes requests to services
+*/
 
-public class APIGateway {
+class PaymentService {
+
+    void payment() {
+        System.out.println("Payment Service");
+    }
+}
+
+class ProductService {
+
+    void products() {
+        System.out.println("Product Service");
+    }
+}
+
+class APIGateway {
+
+    PaymentService ps = new PaymentService();
+
+    ProductService prs = new ProductService();
+
+    void route(String service) {
+
+        if(service.equals("payment")) {
+            ps.payment();
+
+        } else if(service.equals("product")) {
+            prs.products();
+
+        } else {
+            System.out.println("Service Not Found");
+        }
+    }
+}
+
+public class APIGatewayDemo {
 
     public static void main(String[] args) {
-        System.out.println("API Gateway");
+
+        APIGateway api = new APIGateway();
+
+        api.route("payment");
+
+        api.route("product");
     }
 }
