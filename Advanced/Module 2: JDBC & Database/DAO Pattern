@@ -1,0 +1,22 @@
+// Description:
+// Demonstrates DAO pattern structure.
+
+// Key Notes:
+// - Separates DB logic from business logic
+
+class StudentDAO {
+
+    void saveStudent() {
+        System.out.println("Student Saved");
+    }
+}
+
+public class DAOPattern {
+
+    public static void main(String[] args) {
+
+        StudentDAO dao = new StudentDAO();
+
+        dao.saveStudent();
+    }
+}
