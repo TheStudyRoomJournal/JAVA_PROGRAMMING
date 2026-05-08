@@ -1,0 +1,22 @@
+// Description:
+// Exception handling best practices.
+
+// Key Notes:
+// - Catch specific exceptions
+// - Avoid empty catch blocks
+
+public class ExceptionBestPractices {
+
+    public static void main(String[] args) {
+
+        try {
+            int[] arr = new int[2];
+
+            System.out.println(arr[5]);
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+
+            System.out.println("Invalid Index");
+        }
+    }
+}
