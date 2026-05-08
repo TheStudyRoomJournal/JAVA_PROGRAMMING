@@ -1,0 +1,28 @@
+// Description:
+// Demonstrates INSERT operation using JDBC.
+
+// Key Notes:
+// - CRUD = Create Read Update Delete
+
+import java.sql.*;
+
+public class CRUDOperations {
+
+    public static void main(String[] args) throws Exception {
+
+        Connection con =
+            DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test",
+                "root",
+                "password"
+            );
+
+        Statement st = con.createStatement();
+
+        st.executeUpdate(
+            "INSERT INTO student VALUES(1,'John')"
+        );
+
+        System.out.println("Inserted");
+    }
+}
