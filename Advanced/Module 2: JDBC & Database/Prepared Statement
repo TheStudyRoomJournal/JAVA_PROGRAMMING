@@ -1,0 +1,33 @@
+// Description:
+// Demonstrates PreparedStatement usage.
+
+// Key Notes:
+// - Prevents SQL injection
+// - Better performance
+
+import java.sql.*;
+
+public class PreparedStatementDemo {
+
+    public static void main(String[] args) throws Exception {
+
+        Connection con =
+            DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test",
+                "root",
+                "password"
+            );
+
+        PreparedStatement ps =
+            con.prepareStatement(
+                "INSERT INTO student VALUES (?, ?)"
+            );
+
+        ps.setInt(1, 2);
+        ps.setString(2, "Alice");
+
+        ps.executeUpdate();
+
+        System.out.println("Inserted");
+    }
+}
