@@ -1,0 +1,12 @@
+// Description:
+// Docker basics overview.
+
+// Key Notes:
+// - Containers package applications
+
+public class DockerBasics {
+
+    public static void main(String[] args) {
+        System.out.println("Docker Container");
+    }
+}
