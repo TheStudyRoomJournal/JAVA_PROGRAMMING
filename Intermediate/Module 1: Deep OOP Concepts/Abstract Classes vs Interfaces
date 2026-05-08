@@ -1,0 +1,36 @@
+// Description:
+// Demonstrates abstract class and interface together.
+
+// Key Notes:
+// - Abstract class can have concrete methods
+// - Interface defines behavior contract
+
+abstract class Device {
+
+    void powerOn() {
+        System.out.println("Device On");
+    }
+}
+
+interface Internet {
+
+    void connect();
+}
+
+class Laptop extends Device implements Internet {
+
+    public void connect() {
+        System.out.println("Connected");
+    }
+}
+
+public class AbstractVsInterface {
+
+    public static void main(String[] args) {
+
+        Laptop l = new Laptop();
+
+        l.powerOn();
+        l.connect();
+    }
+}
