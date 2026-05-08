@@ -1,0 +1,28 @@
+// Description:
+// Demonstrates multiple catch blocks and finally.
+
+// Key Notes:
+// - finally always executes
+
+public class MultipleCatchFinally {
+
+    public static void main(String[] args) {
+
+        try {
+            String s = null;
+            System.out.println(s.length());
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Arithmetic Error");
+
+        } catch (NullPointerException e) {
+
+            System.out.println("Null Error");
+
+        } finally {
+
+            System.out.println("Finally Executed");
+        }
+    }
+}
