@@ -1,0 +1,12 @@
+// Description:
+// Unit testing example structure.
+
+// Key Notes:
+// - Tests individual methods
+
+public class JUnitTestDemo {
+
+    public static void main(String[] args) {
+        System.out.println("JUnit Testing");
+    }
+}
