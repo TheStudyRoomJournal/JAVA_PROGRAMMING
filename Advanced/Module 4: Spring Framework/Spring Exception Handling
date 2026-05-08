@@ -1,0 +1,17 @@
+// Description:
+// Demonstrates exception handling concept.
+
+// Key Notes:
+// - try-catch manages runtime errors
+
+public class SpringExceptionHandling {
+
+    public static void main(String[] args) {
+
+        try {
+            int a = 10 / 0;
+        } catch (Exception e) {
+            System.out.println("Error Handled");
+        }
+    }
+}
