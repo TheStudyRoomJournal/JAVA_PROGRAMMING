@@ -1,0 +1,12 @@
+// Description:
+// Maven project structure notes.
+
+// Key Notes:
+// - pom.xml manages dependencies
+
+public class MavenNotes {
+
+    public static void main(String[] args) {
+        System.out.println("Maven Build Tool");
+    }
+}
