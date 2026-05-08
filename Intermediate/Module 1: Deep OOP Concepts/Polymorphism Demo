@@ -1,0 +1,29 @@
+// Description:
+// Demonstrates runtime polymorphism.
+
+// Key Notes:
+// - Parent reference points to child object
+
+class Shape {
+
+    void draw() {
+        System.out.println("Drawing Shape");
+    }
+}
+
+class Circle extends Shape {
+
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class PolymorphismDemo {
+
+    public static void main(String[] args) {
+
+        Shape s = new Circle();
+
+        s.draw();
+    }
+}
