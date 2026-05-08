@@ -1,0 +1,12 @@
+// Description:
+// Basic Spring Boot application structure.
+
+// Key Notes:
+// - Simplifies Spring configuration
+
+public class SpringBootIntro {
+
+    public static void main(String[] args) {
+        System.out.println("Spring Boot App");
+    }
+}
