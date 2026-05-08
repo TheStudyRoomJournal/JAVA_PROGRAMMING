@@ -1,12 +1,246 @@
+//
 // Description:
-// Mini REST API project structure.
+// Mini JDBC console application for basic student database operations.
+//
+// Features:
+// - Database connection
+// - Insert student
+// - View students
+// - Update student
+// - Delete student
+//
+// Requirements:
+// 1. MySQL installed
+// 2. JDBC Driver added
+// 3. Database created
+//
+// SQL Setup:
+// CREATE DATABASE school;
+//
+// USE school;
+//
+// CREATE TABLE students (
+//     id INT PRIMARY KEY,
+//     name VARCHAR(50),
+//     marks DOUBLE
+// );
+//
 
-// Key Notes:
-// - Combines controller, service, repository
+import java.sql.*;
+import java.util.Scanner;
 
-public class SpringMiniProject {
+public class MiniDBProject {
 
+    // Database credentials
+    static final String URL =
+        "jdbc:mysql://localhost:3306/school";
+
+    static final String USER = "root";
+
+    static final String PASSWORD = "password";
+
+    // Database connection method
+    static Connection getConnection() throws Exception {
+
+        return DriverManager.getConnection(
+            URL,
+            USER,
+            PASSWORD
+        );
+    }
+
+    // Insert student
+    static void insertStudent() {
+
+        try {
+
+            Scanner sc = new Scanner(System.in);
+
+            Connection con = getConnection();
+
+            String query =
+                "INSERT INTO students VALUES (?, ?, ?)";
+
+            PreparedStatement ps =
+                con.prepareStatement(query);
+
+            System.out.print("Enter ID: ");
+            int id = sc.nextInt();
+
+            sc.nextLine();
+
+            System.out.print("Enter Name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter Marks: ");
+            double marks = sc.nextDouble();
+
+            ps.setInt(1, id);
+            ps.setString(2, name);
+            ps.setDouble(3, marks);
+
+            int rows = ps.executeUpdate();
+
+            System.out.println(
+                rows + " student inserted."
+            );
+
+            con.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    }
+
+    // View students
+    static void viewStudents() {
+
+        try {
+
+            Connection con = getConnection();
+
+            Statement st = con.createStatement();
+
+            ResultSet rs =
+                st.executeQuery(
+                    "SELECT * FROM students"
+                );
+
+            System.out.println("\nStudent Records");
+
+            while (rs.next()) {
+
+                System.out.println(
+                    rs.getInt("id") + " | " +
+                    rs.getString("name") + " | " +
+                    rs.getDouble("marks")
+                );
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    }
+
+    // Update student marks
+    static void updateStudent() {
+
+        try {
+
+            Scanner sc = new Scanner(System.in);
+
+            Connection con = getConnection();
+
+            String query =
+                "UPDATE students SET marks=? WHERE id=?";
+
+            PreparedStatement ps =
+                con.prepareStatement(query);
+
+            System.out.print("Enter Student ID: ");
+            int id = sc.nextInt();
+
+            System.out.print("Enter New Marks: ");
+            double marks = sc.nextDouble();
+
+            ps.setDouble(1, marks);
+            ps.setInt(2, id);
+
+            int rows = ps.executeUpdate();
+
+            System.out.println(
+                rows + " record updated."
+            );
+
+            con.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    }
+
+    // Delete student
+    static void deleteStudent() {
+
+        try {
+
+            Scanner sc = new Scanner(System.in);
+
+            Connection con = getConnection();
+
+            String query =
+                "DELETE FROM students WHERE id=?";
+
+            PreparedStatement ps =
+                con.prepareStatement(query);
+
+            System.out.print("Enter Student ID: ");
+            int id = sc.nextInt();
+
+            ps.setInt(1, id);
+
+            int rows = ps.executeUpdate();
+
+            System.out.println(
+                rows + " record deleted."
+            );
+
+            con.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    }
+
+    // Main menu
     public static void main(String[] args) {
-        System.out.println("Spring Mini Project");
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+
+            System.out.println("\n==== MENU ====");
+            System.out.println("1. Insert Student");
+            System.out.println("2. View Students");
+            System.out.println("3. Update Student");
+            System.out.println("4. Delete Student");
+            System.out.println("5. Exit");
+
+            System.out.print("Choose option: ");
+
+            int choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    insertStudent();
+                    break;
+
+                case 2:
+                    viewStudents();
+                    break;
+
+                case 3:
+                    updateStudent();
+                    break;
+
+                case 4:
+                    deleteStudent();
+                    break;
+
+                case 5:
+                    System.out.println("Application Closed");
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
     }
 }
